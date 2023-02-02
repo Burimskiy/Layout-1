@@ -228,7 +228,7 @@ window.addEventListener('scroll', function() {
 	
 	let circleWrapper = document.querySelectorAll('.circle-wrapper'); //;
 	let windowHeight = window.innerHeight;
-	let circleItem;
+	let circleItems;
 	let circleDescription;
 	//let mobileText = document.querySelector('.mobile-text');
 	//let circleWrapper = document.querySelector('.circles-wrapper');
@@ -244,27 +244,38 @@ window.addEventListener('scroll', function() {
 		for (let j = 0; j < circleWrapper.length; j++ ){
 
 			circleDescription = circleWrapper[j].querySelector('.circle-text');
-			if ( pageScroll + windowHeight >= circleDescription.getBoundingClientRect().top ) {
-			console.log(circleDescription[j]);
+			
+			//if ( pageScroll + windowHeight >= circleDescription.getBoundingClientRect().top ) {
+				
+			//console.log(circleDescription[j]);
 				//circleText.classList.add('animation-show');
 				//circleText.classList.remove('animation-no-show');
-				circleItem = circleWrapper[j].querySelectorAll('.circle-item');
-				for (let i = 0; i < circleItem.length; i++ ){
+				let circleWrapperHeight = circleWrapper[j].getBoundingClientRect().height;
+				
+				let circleItems = circleWrapper[j].querySelectorAll('.circle-item');
+				let quantityItems = circleItems.length;
+				let circleWrapperTop = circleWrapper[j].offsetTop;				
+				let partWrapper = circleWrapperHeight/quantityItems;
+				
+				
+				for (let i = 0; i < quantityItems; i++ ){
 					let k = i+1;
-					circleItem[i].classList.add('add-animation');
+					if ( pageScroll + windowHeight >= circleWrapperTop + i*partWrapper ){
+						circleItems[i].classList.add('add-animation');
+					}					
 				}
 
-				if ( circleItem.clientHeight) {
+				if ( circleItems.clientHeight) {
 
 				}
 
-			} else {
+			//} else {
 
 				//circleText.classList.remove('animation-show');
 				//circleText.classList.add('animation-no-show');
 
 
-			}
+			//}
 			
 		}
 
@@ -320,4 +331,24 @@ for (let i = 0; i < ossSliderItems.length; i++) {
 	
 	
 }*/
+
+let reviewsSection = document.querySelector('#reviews-section');
+let reviewsSliderCover = document.querySelector('.reviews-slider-cover');
+let winHeight = window.innerHeight;
+let s;
+//console.log( winHeight );
+//console.log( reviewsSection.offsetTop);
+let i = 0;
+window.addEventListener('scroll', function() {
+	let pageScroll = window.pageYOffset;
+	let sumH = pageScroll+winHeight;
+	s = i*25;
+	if (sumH >= reviewsSection.offsetTop && s <= 900){
+		
+		i++;
+		reviewsSliderCover.style.height = s + 'px';
+		console.log(s);
+	}
+	
+});
 

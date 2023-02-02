@@ -13,15 +13,7 @@ body {
 
 /* video section */
 
-.video-heading {
 
-	font-family: Nunito;
-	font-size: 80px;
-	font-weight: 700;
-	line-height: 90px;
-	text-align: left;
-	color: white;
-}
 
 .video-subheading {
 	font-family: Jost;
@@ -47,6 +39,55 @@ body {
 	background: linear-gradient(to right,#48dca6 0%,#3fa0d2 100%);
 }
 
+.video-heading {
+	font-family: Nunito;
+	font-weight: 700;
+	text-align: left;
+	color: white;
+}
+
+
+
+@media (min-width: 0px) and (max-width: 575px) {
+
+	.video-heading {
+		font-size: 43px;
+		line-height: 45px;
+		margin-bottom:10px;
+	}
+	
+	.video-subheading {
+		font-size: 20px;
+		line-height: 22px;
+	}
+}
+
+@media (min-width: 576px) {
+	.video-heading {
+		font-size: 56px;
+		line-height: 67px;
+	}
+	
+	.video-subheading {
+		font-size: 29px;
+		line-height: 42px;
+	}
+	
+}
+
+@media (min-width: 768px) {
+
+	.video-heading {
+
+		font-family: Nunito;
+		font-size: 80px;
+		font-weight: 700;
+		line-height: 90px;
+		text-align: left;
+		color: white;
+	}
+}
+
 
 
 .career-button:before, .career-button:after {
@@ -69,12 +110,12 @@ body {
 
 .video-text {
     padding-top: 230px;
-    padding-left: 40px;
-    padding-bottom: 20px;
+    /*padding-left: 40px;
+    padding-bottom: 20px;*/
 }
 
 .banner-button {
-    margin-left: 40px;
+    /*margin-left: 40px;*/
     margin-top: 40px;
 }
 
@@ -257,6 +298,11 @@ section#slider-with-phone, section#steps-to-implement-salesforce, section#our-im
 	cursor: pointer;
 	
 }
+@media (max-width:768px) {
+	.mobile-display-none {
+		display:none;
+	}
+}
 
 .one-slider-container .slider-item-text {
 	font-size: 31px;
@@ -356,6 +402,30 @@ section#slider-with-phone, section#steps-to-implement-salesforce, section#our-im
     background-repeat: no-repeat;
 }
 
+@media (max-width: 768px) {
+	.slider-description {
+		background: url(images/mobile-head-text-bg.svg) no-repeat center center!important;
+		height: 1100px!important;
+		background-size: contain!important;
+		background-position-y: top!important;
+		
+	}
+	
+	.slider-description-heading{
+		font-size: 30px!important;
+		line-height: 40px!important;
+		padding-top: 25px!important;
+	}
+	.slider-description-text{
+		font-size: 18px!important;
+		line-height: 26px!important;
+	}
+
+
+
+
+}
+
 .slider-description-heading {	
 	font-family: Nunito;
     padding: 35px;
@@ -386,8 +456,8 @@ section#slider-with-phone, section#steps-to-implement-salesforce, section#our-im
 .slider-description-block {
     
     margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    /*padding-left: 10px;
+    padding-right: 10px;*/
 }
 
 /* 6 steps block styles*/
@@ -502,6 +572,77 @@ section#steps-to-implement-salesforce {
     background-repeat: no-repeat;
     transform: translateY(-19%);
 }
+
+.mobile-circle {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.circle-wrapper-right{
+		background: none;
+	}
+	
+	.circle-text {
+		color: #454545;
+	}
+	
+	.circle-text-container, .circle-wrapper-right .circle-text-container{
+		margin: 0;
+		position: relative;
+		padding-top:10px;
+		max-width: none;
+	}
+	.circle-text .circle-text-heading, .circle-text .circle-text-description
+	{
+		text-align: center;
+	}
+	
+	.circle-text .circle-text-description{
+		margin-top: 20px;
+	}
+	
+	.mobile-circle-container {
+		display: block;
+		position: sticky;
+		top: 0;
+		right: 0px;
+	}
+	
+	/*.circle-items-container {
+		margin-right: -65px;
+	}*/
+	
+	.circle-item {
+		opacity: 1!important;
+	}
+	
+	.mobile-circle {
+		display: block;
+		/*position: sticky;
+		background: url(images/mobile-circle-right.png)no-repeat center center;
+		height: 600px;
+		margin: 0 auto;
+		max-width: 1100px;
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		display: block;
+		top: 0;
+		right: 0px;	*/	
+	}
+	.mobile-circle img {
+		height: 100%;
+		width: 100%;
+	}
+	
+	.circle-wrapper-right {
+	    overflow-x: inherit;
+		overflow-y: inherit;
+	}
+	
+}
+
+
 
 
 
@@ -620,41 +761,41 @@ section#steps-to-implement-salesforce {
 	}
 	
     .add-animation.orbit-animation-1 {		
-        animation: orbit-1 2s linear 1;
+        animation: orbit-1 1.5s linear 1;
 		animation-fill-mode: forwards;	
 		animation-delay: 0.1s;
     }
 
 
     .add-animation.orbit-animation-2 {
-        animation: orbit-2 2s linear 1;
+        animation: orbit-2 1.5s linear 1;
 		animation-fill-mode: forwards;
-		animation-delay: 0.2s;
+		animation-delay: 0.1s;
     }
 
     .add-animation.orbit-animation-3 {
-        animation: orbit-3 2s linear 1;
+        animation: orbit-3 1.5s linear 1;
 		animation-fill-mode: forwards;
-		animation-delay: 0.3s;
+		animation-delay: 0.1s;
     }
 
     .add-animation.orbit-animation-4 {
-        animation: orbit-4 2s linear 1;
+        animation: orbit-4 1.5s linear 1;
 		animation-fill-mode: forwards;
-		animation-delay: 0.4s;
+		animation-delay: 0.1s;
     }
 
     .add-animation.orbit-animation-5 {
-        animation: orbit-5 2s linear 1;
+        animation: orbit-5 1.5s linear 1;
 		animation-fill-mode: forwards;
-		animation-delay: 0.5s;
+		animation-delay: 0.1s;
 
     }
 	
 	.add-animation.orbit-animation-6 {
-        animation: orbit-6 2s linear 1;
+        animation: orbit-6 1.5s linear 1;
 		animation-fill-mode: forwards;
-		animation-delay: 0.6s;
+		animation-delay: 0.1s;
     }
 	
 	/* right circle animation */
@@ -673,32 +814,32 @@ section#steps-to-implement-salesforce {
 	}
 			
     .circle-wrapper-right .add-animation.orbit-animation-1 {		
-        animation: orbit-right-1 2s linear 1;
+        animation: orbit-right-1 1.5s linear 1;
 		animation-delay: 0.1s;
         animation-fill-mode: forwards;		
     }
 	
 	.circle-wrapper-right .add-animation.orbit-animation-2 {		
-        animation: orbit-right-2 2s linear 1;
-		animation-delay: 0.2s;
+        animation: orbit-right-2 1.5s linear 1;
+		animation-delay: 0.1s;
         animation-fill-mode: forwards;		
     }
 
 	.circle-wrapper-right .add-animation.orbit-animation-3 {		
-        animation: orbit-right-3 2s linear 1;
-		animation-delay: 0.3s;
+        animation: orbit-right-3 1.5s linear 1;
+		animation-delay: 0.1s;
         animation-fill-mode: forwards;		
     }	
 
 	.circle-wrapper-right .add-animation.orbit-animation-4 {		
-        animation: orbit-right-4 2s linear 1;
-		animation-delay: 0.4s;
+        animation: orbit-right-4 1.5s linear 1;
+		animation-delay: 0.1s;
         animation-fill-mode: forwards;		
     }	
 
 	.circle-wrapper-right .add-animation.orbit-animation-5 {		
-        animation: orbit-right-5 2s linear 1;
-		animation-delay: 0.5s;
+        animation: orbit-right-5 1.5s linear 1;
+		animation-delay: 0.1s;
         animation-fill-mode: forwards;		
     }		
 
@@ -1408,52 +1549,6 @@ margin-top: 50px;
     background: #D1CB28;
 }
 
-.btn-slider {
-    text-align: center;
-    padding: 10px;
-    margin: 5px;
-    font-family: Jost;
-    border-radius: 10px;
-    border: 1px solid #cbcbcb;
-    cursor: pointer;
-}
-
-
-
-.slider-description {
-	background: url(images/slider-head-text-background.svg) no-repeat center center;
-    height: 600px;
-    margin: 0 auto;
-    max-width: 1100px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.slider-description-heading {	
-	font-family: Nunito;
-    padding: 35px;
-    padding-top: 80px;
-    z-index: 99;
-    color: white;
-    font-size: 75px;
-    line-height: 80px;
-    margin: 0 auto;
-    display: block;
-    width: 92%;
-}
-
-.slider-description-text {
-	font-family: Jost;
-	color: white;
-	padding-right: 45px;
-    padding-left: 45px;
-    font-size: 19px;
-}
-
-
-
-
 
 
 
@@ -1518,7 +1613,8 @@ margin-top: 50px;
 /* Reviews block styles */
 
 .reviews-slider-block-wrapper {
-margin-top: 50px;
+	margin-top: 50px;
+	height: 900px;
 }
 
 .reviews-slider{
@@ -1766,53 +1862,7 @@ margin-top: 50px;
 
 
 
-.slider-description {
-	background: url(images/slider-head-text-background.svg) no-repeat center center;
-    height: 600px;
-    margin: 0 auto;
-    max-width: 1100px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
 
-.slider-description-heading {	
-	font-family: Nunito;
-    padding: 35px;
-    padding-top: 80px;
-    z-index: 99;
-    color: white;
-    font-size: 75px;
-    line-height: 80px;
-    margin: 0 auto;
-    display: block;
-    width: 92%;
-}
-
-.slider-description-text {
-	font-family: Jost;
-	color: white;
-	padding-right: 45px;
-    padding-left: 45px;
-    font-size: 19px;
-}
-
-
-
-
-
-
-
-
-
-.heading-description{
-	font-family: Jost;
-	font-size: 33px;
-	font-weight: 300;
-	line-height: 40px;
-	letter-spacing: 0em;
-	text-align: left;
-}
 
 .heading-wrapper .text {
     /*width: 55%;*/
@@ -1967,14 +2017,6 @@ section#accordions-block {
     transform: translateY(-35%);
 }
 
-.heading-description{
-	font-family: Jost;
-	font-size: 33px;
-	font-weight: 300;
-	line-height: 40px;
-	letter-spacing: 0em;
-	text-align: left;
-}
 
 .heading-wrapper .text {
     width: 55%;
@@ -2021,11 +2063,27 @@ margin-top: 50px;
   poiner-events: none;
 }
 
+.swiper-slider-min-width {
+    height: 500px;
+}
+
 .oss-slider-track {
     display: flex;
     /*margin-left: 15px;
     margin-right:15px;*/
     transition: .2s;
+}
+
+.oss-slider-item {
+    height: 350px;
+}
+.oss-slider-container .swiper-slide {
+	height: 73%;
+}
+
+.oss-slider-container  .swiper-wrapper {
+    height: 500px;
+	align-items: flex-end;
 }
 
 .oss-slider-item {
@@ -2043,6 +2101,7 @@ margin-top: 50px;
 	background-repeat-x:no-repeat;
 	display:block;
 	color: white;
+	transition: transform 0.3s ease-out;
 	
 }
 
@@ -2111,7 +2170,7 @@ margin-top: 50px;
 
 .oss-slider-item-container {
     height: 364px;
-	transition: transform 0.3s ease-out; 
+	transition: transform 0.6s ease-out; 
 	padding-top: 25px;
     padding-right: 15px;
     padding-bottom: 35px;
@@ -2120,12 +2179,18 @@ margin-top: 50px;
 
 .oss-slider-item:hover .oss-slider-item-container {
 	transform: translateY(207px);
-	transform: translateY(-60%);
-	transition: transform 0.3s ease-out; 
+	transform: translateY(-45%);
+	transition: transform 0.6s ease-out; 
 }
 
 .oss-slider-item:hover {
 	
+}
+
+.oss-slider-item:hover {
+    height: 450px;
+    transform: translateY(-95px);
+    transition: transform 0.3s ease-out;
 }
 
 span.swiper-pagination-bullet-active {
@@ -2134,43 +2199,6 @@ span.swiper-pagination-bullet-active {
 }
 
 
-
-
-.btn-slider {
-    text-align: center;
-    padding: 10px;
-    margin: 5px;
-    font-family: Jost;
-    border-radius: 10px;
-    border: 1px solid #cbcbcb;
-    cursor: pointer;
-}
-
-
-
-.slider-description {
-	background: url(images/slider-head-text-background.svg) no-repeat center center;
-    height: 600px;
-    margin: 0 auto;
-    max-width: 1100px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.slider-description-heading {	
-	font-family: Nunito;
-    padding: 35px;
-    padding-top: 80px;
-    z-index: 99;
-    color: white;
-    font-size: 75px;
-    line-height: 80px;
-    margin: 0 auto;
-    display: block;
-    width: 92%;
-	position: relative;
-}
 
 .slider-description-heading:before{
 	position: absolute;
@@ -2185,13 +2213,7 @@ span.swiper-pagination-bullet-active {
     transform: translateY(-22%);
 }
 
-.slider-description-text {
-	font-family: Jost;
-	color: white;
-	padding-right: 45px;
-    padding-left: 45px;
-    font-size: 19px;
-}
+
 
 
 
@@ -2242,9 +2264,7 @@ span.swiper-pagination-bullet-active {
 	width: 90%;
 }
 
-.oss-slider-item {
-    height: 350px;
-}
+
 
 
 .animation-icons-opacity-1 {
